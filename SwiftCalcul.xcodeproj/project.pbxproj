@@ -14,6 +14,9 @@
 		527F255E2BA45DB80046D51C /* SwiftCalculTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F255D2BA45DB80046D51C /* SwiftCalculTests.swift */; };
 		527F25682BA45DB80046D51C /* SwiftCalculUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25672BA45DB80046D51C /* SwiftCalculUITests.swift */; };
 		527F256A2BA45DB80046D51C /* SwiftCalculUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25692BA45DB80046D51C /* SwiftCalculUITestsLaunchTests.swift */; };
+		527F25772BA47C6D0046D51C /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25762BA47C6D0046D51C /* Operation.swift */; };
+		527F25792BA47D430046D51C /* OperationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F25782BA47D430046D51C /* OperationViewModel.swift */; };
+		527F257B2BA4871E0046D51C /* OperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F257A2BA4871E0046D51C /* OperationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		527F25632BA45DB80046D51C /* SwiftCalculUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftCalculUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		527F25672BA45DB80046D51C /* SwiftCalculUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCalculUITests.swift; sourceTree = "<group>"; };
 		527F25692BA45DB80046D51C /* SwiftCalculUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCalculUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		527F25762BA47C6D0046D51C /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		527F25782BA47D430046D51C /* OperationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewModel.swift; sourceTree = "<group>"; };
+		527F257A2BA4871E0046D51C /* OperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				527F254E2BA45DB70046D51C /* ContentView.swift */,
 				527F25502BA45DB70046D51C /* Assets.xcassets */,
 				527F25522BA45DB70046D51C /* Preview Content */,
+				527F25762BA47C6D0046D51C /* Operation.swift */,
+				527F25782BA47D430046D51C /* OperationViewModel.swift */,
+				527F257A2BA4871E0046D51C /* OperationView.swift */,
 			);
 			path = SwiftCalcul;
 			sourceTree = "<group>";
@@ -257,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527F25792BA47D430046D51C /* OperationViewModel.swift in Sources */,
 				527F254F2BA45DB70046D51C /* ContentView.swift in Sources */,
+				527F257B2BA4871E0046D51C /* OperationView.swift in Sources */,
 				527F254D2BA45DB70046D51C /* SwiftCalculApp.swift in Sources */,
+				527F25772BA47C6D0046D51C /* Operation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

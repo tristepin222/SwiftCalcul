@@ -1,24 +1,24 @@
 //
 //  ContentView.swift
-//  SwiftCalcul
+//  Calculator
 //
-//  Created by tristepin222 on 15.03.2024.
+//  Created by Afraz Siddiqui on 3/5/21.
 //
 
 import SwiftUI
 
+
 struct ContentView: View {
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        let operation = Operation(operationType: .none, buttonType: .zero)
+        let viewModel = OperationViewModel(operation: operation)
+        OperationView(viewModel: viewModel)
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
