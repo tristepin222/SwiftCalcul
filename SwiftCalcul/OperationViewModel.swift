@@ -14,7 +14,7 @@ class OperationViewModel: ObservableObject {
     var runningNumber = 0.0
 
     var pastOperation: ButtonType = .equal
-    var isNegative = false
+    var hasDecimal = false
     
     let buttons: [[ButtonType]] = [
         [.clear, .negative, .percent, .divide],
@@ -35,6 +35,7 @@ class OperationViewModel: ObservableObject {
     func didTap(button: ButtonType) {
         switch button {
         case .add, .subtract, .multiply, .divide, .equal:
+            self.hasDecimal = false
             if button == .add {
                 self.operation.operationType = .add
                 self.runningNumber = Double(self.value) ?? 0
@@ -70,20 +71,18 @@ class OperationViewModel: ObservableObject {
                 
             }
         case .clear:
+            self.hasDecimal = false
             self.value = "0"
             self.runningNumber = 0
         case .decimal:
-            self.value = "\(self.value)\(".")"
+            if !self.hasDecimal {
+                self.value = "\(self.value)\(".")"
+                self.hasDecimal = true
+            }
             break
         case .negative:
 
-            if !self.isNegative {
-                self.value =  String(-(Double(self.value) ?? 0))
-                self.isNegative = true
-            }else{
-                self.value =  String(value)
-                self.isNegative = false
-            }
+            self.value =  String(-(Double(self.value) ?? 0))
 
             break
         case .percent:
