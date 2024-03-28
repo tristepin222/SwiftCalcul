@@ -71,7 +71,6 @@ class OperationViewModel: ObservableObject {
                 
             }
         case .clear:
-            self.hasDecimal = false
             self.value = "0"
             self.runningNumber = 0
         case .decimal:
